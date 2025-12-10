@@ -24,7 +24,7 @@ body {
     flex-direction: column;
     font-family: 'Museo Sans';
     font-weight: 300;
-    color: beige;
+    color: rgb(237, 237, 237);
     background-color: #1a1a1a;
 }
 
@@ -32,6 +32,7 @@ body {
     width: 100%;
     height: auto;
     margin-bottom: -100px;
+    
 }
 
 
@@ -45,6 +46,11 @@ body {
     max-width: 1400px;
     margin-bottom: 80px;
     padding: 0 20px;
+    overflow: hidden;
+}
+
+#contact {
+    text-align: left;
 }
 
 h1 {
@@ -73,6 +79,10 @@ p {
     margin: 0;
 }
 
+a {
+    color: rgb(237, 237, 237);
+}
+
 p.header {
     font-weight: 300;
     font-size: clamp(20px, 3vw, 40px);
@@ -89,10 +99,60 @@ p.header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
+
+.music_card::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -2;
+    padding: 3px;
+    border-radius: 20px;
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+/* @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.music_card::after, .music_card::before{
+    
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, beige);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -2;
+    padding: 3px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+
+.music_card::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+} 
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}   */
 
 .music_card>img {
     position: absolute;
@@ -107,6 +167,21 @@ p.header {
     border-radius: 20px;
 }
 
+img::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -2;
+    padding: 3px;
+    border-radius: 20px;
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
 .music_card>div {
     width: 100%;
 }
@@ -118,7 +193,7 @@ p.header {
 .dot {
     height: clamp(48px, 7vw, 96px);
     width: clamp(48px, 7vw, 96px);
-    background-color: beige;
+    background-color: rgb(237, 237, 237);
     color: #1a1a1a;
     border-radius: 50%;
     display: inline-block;
@@ -127,7 +202,7 @@ p.header {
 }
 
 .dot:hover {
-    background-color: rgb(225, 225, 207);
+    background-color: rgb(224, 224, 224);
 }
 
 .play_button_container {
@@ -135,6 +210,13 @@ p.header {
     flex-wrap: wrap;
     align-items: center;
     gap: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 80px;
 }
 
 /* MEDIA QUERY */
@@ -170,7 +252,8 @@ p.header {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 25px;
+        gap: 20px;
+        margin-bottom: 80px
     }
 
     .music_card>img {
@@ -188,5 +271,15 @@ p.header {
         align-items: center;
         justify-content: space-between;
         gap: 0px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
