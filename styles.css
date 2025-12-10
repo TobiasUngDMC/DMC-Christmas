@@ -56,13 +56,13 @@ h1 {
 
 h2 {
     font-weight: 700;
-    font-size: clamp(48px, 10vw, 128px);
+    font-size: clamp(40px, 10vw, 128px);
     margin: 0;
 }
 
 h3 {
     font-weight: 700;
-    font-size: clamp(28px, 6vw, 64px);
+    font-size: clamp(24px, 6vw, 64px);
     margin: 0;
 }
 
@@ -77,6 +77,7 @@ p.header {
     font-weight: 300;
     font-size: clamp(20px, 3vw, 40px);
     margin: auto;
+    width: 80%;
 }
 
 .music_card {
@@ -89,6 +90,7 @@ p.header {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 
@@ -114,15 +116,23 @@ p.header {
 }
 
 .dot {
-    height: clamp(48px, 7vw, 128px);
-    width: clamp(48px, 7vw, 128px);
+    height: clamp(48px, 7vw, 96px);
+    width: clamp(48px, 7vw, 96px);
     background-color: beige;
+    color: #1a1a1a;
     border-radius: 50%;
     display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.dot:hover {
+    background-color: rgb(225, 225, 207);
 }
 
 .play_button_container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 40px;
 }
@@ -135,12 +145,16 @@ p.header {
         width: 200%;
         height: auto;
         align-self: center;
-        margin-bottom: -80px;
+        margin-bottom: -40px;
     }
 
     h1 {
         margin-bottom: 40px;
 
+    }
+
+    p.header {
+        width: 100%;
     }
 
     p {
