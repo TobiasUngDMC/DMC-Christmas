@@ -1,0 +1,178 @@
+/* Define the Museo Sans font */
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('./assets/fonts/Museo Sans/MuseoSans_300.otf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('./assets/fonts/Museo Sans/MuseoSans_700.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Example usage of Museo Sans */
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Museo Sans';
+    font-weight: 300;
+    color: beige;
+    background-color: #1a1a1a;
+}
+
+.header_image {
+    width: 100%;
+    height: auto;
+    margin-bottom: -100px;
+}
+
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1400px;
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: clamp(48px, 10vw, 128px);
+    margin: 0;
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: clamp(48px, 10vw, 128px);
+    margin: 0;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: clamp(28px, 6vw, 64px);
+    margin: 0;
+}
+
+p {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 150%;
+    margin: 0;
+}
+
+p.header {
+    font-weight: 300;
+    font-size: clamp(20px, 3vw, 40px);
+    margin: auto;
+}
+
+.music_card {
+    width: 100%;
+    padding: 80px;
+    position: relative;
+    height: 770px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+
+.music_card>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    object-position: right;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.music_card>div {
+    width: 100%;
+}
+
+.bottom {
+    width: 100%;
+}
+
+.dot {
+    height: clamp(48px, 7vw, 128px);
+    width: clamp(48px, 7vw, 128px);
+    background-color: beige;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.play_button_container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 900px) {
+
+    .header_image {
+        width: 200%;
+        height: auto;
+        align-self: center;
+        margin-bottom: -80px;
+    }
+
+    h1 {
+        margin-bottom: 40px;
+
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .music_card {
+        width: 100%;
+        padding: 0px;
+        position: relative;
+        height: auto;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 25px;
+    }
+
+    .music_card>img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        min-width: 250px;
+        object-position: right;
+        z-index: -1;
+    }
+
+    .play_button_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0px;
+    }
+}
