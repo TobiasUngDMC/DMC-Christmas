@@ -67,7 +67,7 @@ h2 {
 }
 
 
-h3 {
+.bottom>p {
     font-weight: 700;
     font-size: clamp(24px, 6vw, 64px);
     margin: 0;
