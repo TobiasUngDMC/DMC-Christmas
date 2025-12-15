@@ -16,12 +16,12 @@ gsap.from(headerImage, {
 })
 
 const textAnim = {
-    yPercent: "random([100, -100])",
+    yPercent: "random([10, -10])",
     rotation: "random(-30, 30)",
     ease: "back.out",
     autoAlpha: 0,
     stagger: {
-        amount: 0.9,
+        amount: 0.5,
         from: "random"
     }
 };
