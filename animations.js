@@ -70,7 +70,7 @@ gsap.utils.toArray(".music_card").forEach(card => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: card,
-                start: "top 60%",
+                start: "top 80%",
                 scrub: true,
                 toggleActions: "play reverse play reverse"
             }
