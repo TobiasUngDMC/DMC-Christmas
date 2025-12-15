@@ -32,7 +32,7 @@ body {
     width: 100%;
     height: auto;
     margin-bottom: -100px;
-    
+
 }
 
 
@@ -66,6 +66,7 @@ h2 {
     margin: 0;
 }
 
+
 h3 {
     font-weight: 700;
     font-size: clamp(24px, 6vw, 64px);
@@ -83,7 +84,7 @@ a {
     color: rgb(237, 237, 237);
 }
 
-p.header {
+p.heading-paragraph {
     font-weight: 300;
     font-size: clamp(20px, 3vw, 40px);
     margin: auto;
@@ -103,56 +104,7 @@ p.header {
 }
 
 
-.music_card::after {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: red;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -2;
-    padding: 3px;
-    border-radius: 20px;
-    filter: blur(1.5rem);
-    opacity: 0.5;
-}
 
-/* @property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-.music_card::after, .music_card::before{
-    
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 70%, beige);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -2;
-    padding: 3px;
-    border-radius: 20px;
-    animation: 3s spin linear infinite;
-}
-
-.music_card::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
-} 
-
-@keyframes spin {
-    from {
-        --angle: 0deg;
-    }
-    to {
-        --angle: 360deg;
-    }
-}   */
 
 .music_card>img {
     position: absolute;
@@ -235,6 +187,7 @@ img::after {
 
     }
 
+
     p.header {
         width: 100%;
     }
@@ -281,7 +234,7 @@ img::after {
 
 @media screen and (max-width: 450px) {
     .grid {
-        
+
         grid-template-columns: 1fr;
     }
-} 
+}
